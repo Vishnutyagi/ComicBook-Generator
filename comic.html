@@ -21,25 +21,47 @@
             display: flex;
             color: rgb(255, 255, 255);
         }
-        #comicDisplay{
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-bottom: 20px;
+        
+        #comicDisplay {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px; 
         }
-        .bubble{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 132%);
-            /* background-color: #000000; */
-            color: #cac8c8;
-            padding: 10px 20px;
-            font-size: 49px;
-            text-align: center;
-            border-radius: 12px;
-            background: #0000006b;
+
+        .image-container {
+        position: relative;
+        width: calc(50% - 10px); 
+        max-width: 500px;
+        margin-bottom: 20px; 
         }
+
+        .comic-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+
+        .bubble-text {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 32px; 
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        }
+
+        @media screen and (max-width: 600px) {
+        .image-container {
+            width: 100%; 
+        }
+        }
+
     </style>
     <title>Your ComicBook</title>
 </head>
