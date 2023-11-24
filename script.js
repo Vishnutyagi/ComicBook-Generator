@@ -48,12 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     const imageData = await query({ "inputs": panels[i] });
                     const img = newWindow.document.createElement('img');
                     img.src = URL.createObjectURL(imageData);
-                    // img.classList.add('comic-image'); 
-                    const bubble = newWindow.document.createElement('div');
-                    bubble.classList.add('bubble');
-                    bubble.textContent = panels[i]; 
-                    comicDisplay.appendChild(img);
-                    img.parentNode.insertBefore(bubble, img.nextSibling);
+                    img.classList.add('comic-image');
+                    const container = newWindow.document.createElement('div');
+                    container.classList.add('image-container');
+                    container.appendChild(img);
+                    const bubbleText = newWindow.document.createElement('p');
+                    bubbleText.classList.add('bubble-text');
+                    bubbleText.textContent = panels[i]; 
+                    container.appendChild(bubbleText);
+                    comicDisplay.appendChild(container);
+                    
                 }
             };
         } catch (error) {
