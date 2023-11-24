@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/avatars-xmas-giveaway/128/batman_hero_avatar_comics-512.png" type="image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: url('bat.webp');
+            background-size: cover;
+        }
+        .heading{
+            position: fixed;
+        }
+        h1{
+            width: 100%;
+            margin-top: 5px;
+            justify-content: center;
+            display: flex;
+            color: rgb(255, 255, 255);
+        }
+        #comicDisplay{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        .bubble{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 132%);
+            /* background-color: #000000; */
+            color: #cac8c8;
+            padding: 10px 20px;
+            font-size: 49px;
+            text-align: center;
+            border-radius: 12px;
+            background: #0000006b;
+        }
+    </style>
+    <title>Your ComicBook</title>
+</head>
+<body>
+    <!-- <div class="heading"> -->
+        <h1 class="h1"> Your comic is loading... </h1>
+    <!-- </div> -->
+    <div id="comicDisplay">
+    </div>
+    <div id="errorMessage">
+    </div>
+</body>
+</html>
